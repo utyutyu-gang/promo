@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    background-color: transparent;
+}
+
+body {
+    overflow-y: hidden;
+    background-color: black;
+}
+.wrapper {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    width: 1200px;
+}
+
+.logo__container p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.logo__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 1s;
+}
+.logo__container.active {
+    transform: translateY(-50%);
+}
+
+.logo__title {
+    font-size: 52px;
+    font-weight: 900;
+}
+.logo__img {
+    margin-bottom: 40px;
+    width: 200px;
+    height: 200px;
+}
+
+.main__container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.member__avatar img {
+    width: 50px;
+    height: 50px;
+}
+.main__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 1s;
+}
+
+.members__container,
+.organization__container {
+    padding: 20px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15%;
+    aspect-ratio: 1/1;
+    align-content: center;
+}
+
+.organization__title,
+.members__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.member__container {
+    display: flex;
+    align-items: center;
+}
+
+.members__container a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+p,
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.members__container a:hover {
+    color: grey;
+}
+
+.member__avatar {
+    margin-right: 20px;
+}
+.member__avatar img {
+    border-radius: 50%;
+}
+
+.members__title {
+    margin-bottom: 20px;
+}
+
+.organization__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.organization__name {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 900;
+}
+.organization__join {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s;
+}
+.organization__join:hover {
+    color: rgba(255, 255, 255, 1);
+}
